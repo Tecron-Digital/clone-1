@@ -1,6 +1,13 @@
 <?php 
 
 session_start();
+
+if(!isset($_SESSION['id'])){
+header("Location:../login.html");
+exit();
+
+
+}
 include "api/classes/DBConnection.php";
 include "api/classes/user.php";
 include "api/classes/NewUser.php";
@@ -10,6 +17,10 @@ include "api/functions/functions.php";
 
 $conn = new DBConnection;
 $conn->connect();
+
+$user = new User;
+$user->id = $_SESSION['id'];
+$user->setDetails();
 
 ?>
 <!DOCTYPE html>
@@ -91,7 +102,7 @@ $conn->connect();
         <div class="name">Estimated Balance</div>
 
         <div class="amount">
-          <div class="main">0.00000000</div>
+          <div class="main"><?php echo $user->main_balance ?></div>
           <div class="crypt">BTC</div>
           <div class="equiv">≈ $0.000000</div>
         </div>

@@ -25,7 +25,7 @@ function signupUser($email,$password){
 
 function setDetails(){
     global $conn;
-    $all_details = $conn->selectData("*","users","id = $this->id","id",0);
+    $all_details = $conn->selectData("*","users","id = '$this->id'","id",0);
     
     foreach($all_details as $details){
        // print_r($details);
