@@ -229,8 +229,112 @@ height: auto;
     max-height:100px;
     max-width:100px;
 }
+.other.flex{
+    display: flex;
+}
+.other span.feint{
+    font-size:14px;
+    display:block;
+    position:static;
+}
+.other.flex select{
+    width:70%;
+    border:0.1px solid rgb(112, 122, 138,0.5);
+border-radius:5px;
+padding:3px;
+box-sizing: border-box;
+margin: 0px;
+min-width: 0px;
+display: flex;
+padding: 8px;
+width: 336px;
+border-radius: 4px;
+border-width: 1px;
+border-color: rgb(234, 236, 239);
+border-style: solid;
+cursor: pointer;
+-moz-box-align: center;
+align-items: center
 
 
+}
+.other.flex .minibal{
+    color:rgb(112, 122, 138,0.1);
+    box-sizing: border-box;
+margin: 0px;
+min-width: 0px;
+font-size: 12px;
+color: rgb(112, 122, 138);
+font-weight: 400;
+text-align: left;
+padding-top: 4px;
+}
+.other.flex bold{
+    font-weight:bold;
+    color:black;
+}
+.other.flex h4{
+    font-size: 14px;
+color: rgb(30, 35, 41);
+line-height: 20px;
+font-weight: 500;
+margin-top:30px;
+}
+.other.flex ul{
+    list-style: none;
+}
+.other.flex ul li{
+    line-height: 30px;
+    box-sizing: border-box;
+margin: 16px 0px 0px;
+min-width: 0px;
+font-size: 12px;
+color: rgb(112, 122, 138);
+line-height: 16px;
+}
+
+.other.flex .flex2{
+font-size:12px;
+color:rgb(112, 122, 138);
+box-shadow:0px 0px 5px 5px rgb(112, 122, 138,0.1);
+padding:20px;
+border-radius:10px;
+margin-left:20px;
+
+}
+.other.flex .flex2 h3{
+    font-size:17px;
+    color:black;
+}
+.other.flex .flex2 .name{
+    text-align:center;
+    margin:10px;
+    font-weight:bold;
+    font-size:14px;
+    color:black;
+}
+.other.flex .arrival{
+    margin-top:20px;
+}
+.other.flex .qrcover{
+    margin:auto;
+    margin-top:30px;
+    width:max-content;
+}
+.other.flex .info{
+color:black;
+font-weight:bold;
+}
+.other.flex .walletaddress{
+font-weight:bold;
+text-align:center;
+margin:20px;
+color:black;
+
+}
+.other.flex .minibal bold{
+
+}
 @media screen and (max-width:800px){
     .content-wrap{
     margin:0;

@@ -34,6 +34,7 @@ function setDetails(){
     $this->profile_image = $details['profile_image'];
     $this->date_joined = $details['date_joined'];
     $this->is_verified = $details['is_verified'];
+    $this->main_balance = number_format($details['main_balance'],8);
     }
 
 }

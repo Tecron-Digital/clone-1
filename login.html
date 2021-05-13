@@ -117,11 +117,10 @@ true,
     var response = JSON.parse(response);
     alert(response.reason)
 
-    if(response.error == true){
+    if(response.error == false){
 
-    }
-    else{
-        alert()
+        window.location = "account/index.php";
+
     }
 
 
