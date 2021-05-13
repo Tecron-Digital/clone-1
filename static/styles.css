@@ -6,7 +6,7 @@
 
 html,
 body {
-    font-family: BinancePlex, Arial, PingFangSC-Regular, 'Microsoft YaHei', sans-serif!important;
+    font-family: "BinancePlex", Arial, PingFangSC-Regular, 'Microsoft YaHei', sans-serif!important;
     height: 100%;
     margin: 0;
     overflow-x: hidden;
@@ -58,7 +58,6 @@ a:hover {
 
 .login-text {
     text-align: center;
-    font-family: 'Recursive', sans-serif;
 }
 
 .small-text {
@@ -71,6 +70,21 @@ a:hover {
 
 .head-text {
     font-size: 15px;
+}
+
+.loading{
+    position:fixed;
+    margin:auto;
+    margin-top:20%;
+    left:50%;
+  margin-left:-5%;
+    padding:15px;
+    background-color:rgb(255,255,255);
+    box-shadow:0px 0px 5px 5px rgb(0,0,0,0.07);
+    display: none;
+}
+.loading img{
+
 }
 
 .bg {

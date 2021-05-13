@@ -19,7 +19,13 @@
 
 </head>
 
+
 <body class="overflow-x-hidden">
+
+    <div class="loading">
+        <img src="static/pictures/loading.gif">
+        
+            </div>
     <div class="row">
         <nav class="navbar navbar-dark container-fluid navbar-expand-sm ">
             <div class="navbar-brand">
@@ -59,15 +65,15 @@
                     <p class="text-size-xl">Mobile</p>
                 </div>
             </div>
-            <form method="POST" action="" class="">
+            <form method="POST" action="account/api/functions/login.php" id="loginForm" class="loginForm" onsubmit="return sendLogin()">
                 <div class="form-group m-3">
                     <p class="small-text text-gray-500 mt-6">Email</p>
-                    <input type="email" class="form-control hover:border-yellow-500 focus:border-yellow-500" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" name="email"  class="form-control hover:border-yellow-500 focus:border-yellow-500" id="exampleInputEmail1" aria-describedby="emailHelp">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group m-3">
                     <p class="small-text text-gray-500 mt-9">Password</p>
-                    <input type="password" class="form-control hover:border-yellow-500 focus:border-yellow-500" id="exampleInputPassword1">
+                    <input type="password" name="password" class="form-control hover:border-yellow-500 focus:border-yellow-500" id="exampleInputPassword1">
                 </div>
                 <button type="submit" class="btn btn-warning w-4/5 mt-2 ml-4 mb-2 mr-2 login-text">Log In</button>
             </form>
@@ -90,6 +96,43 @@
     <div class="text-center mt-12">
         <p class="small-text text-gray-500">&#169; 2017-2021. All rights reserved</p>
     </div>
+
+    
+    <script src="js/ajax.js"></script>
+
+
+    <script>
+
+function sendLogin(){
+
+    var form = document.querySelector(".loginForm")
+    makeRequest(
+  "POST",
+  form.action,
+  true,
+true,
+  "#loginForm",
+  function (response){
+      
+    var response = JSON.parse(response);
+    alert(response.reason)
+
+    if(response.error == true){
+
+    }
+    else{
+        alert()
+    }
+
+
+  }
+)
+
+return false;
+}
+
+    </script>
+
 </body>
 
 </html>

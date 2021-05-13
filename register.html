@@ -20,6 +20,10 @@
 </head>
 
 <body class="overflow-x-hidden">
+    <div class="loading">
+        <img src="static/pictures/loading.gif">
+        
+            </div>
     <div class="row ">
         <nav class="navbar navbar-dark container-fluid navbar-expand-sm">
             <div class="navbar-brand">
@@ -60,7 +64,7 @@
                 </div>
             </div>
 
-            <form method="POST" action="account/api/functions/login.php" class="loginForm" id="loginForm" onsubmit="return sendLogin()">
+            <form method="POST" action="account/api/functions/register.php" class="loginForm" id="loginForm" onsubmit="return sendRegister()">
                 <div class="form-group m-3">
                     <p class="small-text text-gray-500 mt-6 ">Email</p>
                     <input type="email" class="form-control hover:border-yellow-500 focus:border-yellow-500" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
@@ -87,12 +91,13 @@
         <p class="small-text text-gray-500">&#169; 2017-2021. All rights reserved</p>
     </div>
 
+    
     <script src="js/ajax.js"></script>
 
 
     <script>
 
-function sendLogin(){
+function sendRegister(){
 
     var form = document.querySelector(".loginForm")
     makeRequest(
@@ -104,13 +109,12 @@ true,
   function (response){
       
     var response = JSON.parse(response);
-    
+    alert(response.reason)
     if(response.error == true){
-alert(response.reason)
+//alert(response.reason)
 
     }
     else{
-        alert()
     }
 
 
@@ -121,6 +125,7 @@ return false;
 }
 
     </script>
+
 </body>
 
 </html>
