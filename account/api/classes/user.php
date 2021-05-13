@@ -9,9 +9,19 @@ public $email;
 public $date_joined;
 public $phone_number;
 public $profile_image;
+public $main_balance;
 public $referrer;
 public $is_verified;
 
+
+
+function signupUser($email,$password){
+    global $conn;
+    $details_result;
+    $date = date("Y-m-d");
+    $result = $conn->insertData(array("email","password","date_joined","profile_image"),array($email,$password,$date,""),"users"); 
+    
+    }
 
 function setDetails(){
     global $conn;

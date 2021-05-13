@@ -1,3 +1,17 @@
+<?php 
+
+session_start();
+include "api/classes/DBConnection.php";
+include "api/classes/user.php";
+include "api/classes/NewUser.php";
+include "api/classes/transaction.php";
+include "api/functions/db_connect.php";
+include "api/functions/functions.php";
+
+$conn = new DBConnection;
+$conn->connect();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
