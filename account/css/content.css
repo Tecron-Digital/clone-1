@@ -1,6 +1,6 @@
 .content-wrap{
 margin-left:12%;
-
+color:rgb(30, 35, 41);
 }
 
 .balance-box{
@@ -141,4 +141,127 @@ line-height: 20px;
     width:95%;
     padding:30px;
     background-color:white;
+}
+
+.popup{
+    z-index:1000;
+    background-color:rgb(0,0,0,0.8);
+    position:fixed;
+    top:0;
+    width:100vw;
+    height:100vh;
+}
+.popup .box{
+    width:50vw;
+    height: 60vh;
+    margin:auto;
+    margin-top:10%;
+    background-color:white;
+    border-radius:4px;
+    position: relative;
+    padding:1px;
+}
+.popup .box .close-btn{
+    position: absolute;
+    margin-right:10px;
+    margin-top:10px;
+    right:10px;
+    top:10px;
+    color:rgb(112, 122, 138);
+    font-size:20px;
+    cursor :pointer;
+    
+
+}
+.popup .box .title{
+ 
+    box-sizing: border-box;
+    margin: 8px 0px 0px;
+    min-width: 0px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    margin-top:30px;
+    margin-left:30px;
+
+}
+.popup .box .feint{
+    box-sizing: border-box;
+margin: 8px 0px 0px;
+    margin-top: 8px;
+min-width: 0px;
+font-weight: 400;
+line-height: 20px;
+color: rgb(112, 122, 138);
+font-size: 13px;
+margin-top: 16px;
+margin-left:30px;
+
+}
+
+.popup .option{
+
+    width:40%;
+    border:0.5px solid rgb(112, 122, 138,0.1);
+    padding:24px;
+    border-radius:5px;
+    margin-left:20px;
+    margin-top:20px;
+    display: flex;
+}
+.popup .option:hover{
+    background-color: rgb(112, 122, 138,0.01);
+    cursor:pointer;
+}
+.popup .option .feint{
+    margin:0;
+    margin-top:10px;
+    box-sizing: border-box;
+margin: 16px 0px 0px;
+min-width: 0px;
+font-size: 12px;
+color: rgb(112, 122, 138);
+line-height: 16px;
+height: auto;
+    
+}
+.popup .option img{
+    max-height:100px;
+    max-width:100px;
+}
+
+
+@media screen and (max-width:800px){
+    .content-wrap{
+    margin:0;
+    }
+.extra-box{
+    width:99%;
+    display:block;
+    margin:0;
+    border:none;
+    margin-top:20px;
+    background: white;
+    padding:10px;
+
+}
+.other{
+    background-color:transparent;
+    padding:5px;
+}
+.extra-box .row:nth-of-type(2){
+width:100%;
+margin:0;
+padding:0;
+
+
+}
+.popup .box{
+    width:95%;
+}
+.popup .option{
+    width:75%;
+
+}
+
 }

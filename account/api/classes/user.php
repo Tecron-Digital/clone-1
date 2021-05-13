@@ -19,12 +19,10 @@ function setDetails(){
     
     foreach($all_details as $details){
        // print_r($details);
-
+    $this->id = $details['id'];
     $this->email = $details['email'];
-    $this->phone_number = $details['phone_number'];
     $this->profile_image = $details['profile_image'];
     $this->date_joined = $details['date_joined'];
-    
     $this->is_verified = $details['is_verified'];
     }
 
@@ -82,7 +80,7 @@ function loginUser($email,$password){
     
     }
     else{
-    $reason = "An Unknown reason occured please try again later";
+    $reason = "an unknown reason occured please try again later";
     $error = true; 
     }
     

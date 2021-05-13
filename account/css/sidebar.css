@@ -25,3 +25,34 @@ top:0;
     list-style:none;
     padding-left:40px;
 }
+
+@media screen and (max-width:800px){
+.sidebar{
+    width:100%;
+    height:max-content;
+    overflow-x: scroll;
+    position: relative;
+}
+.sidebar ul{
+    display: flex;
+    position:relative;
+    width:max-content;
+    color:white;
+    padding:0;
+    background-color:black;
+
+    padding-top:30px;
+    padding-bottom:30px;
+}
+.sidebar ul li{
+    width:max-content;
+}
+.sidebar ul li a{
+    color:rgb(112, 122, 138);
+    padding-left:10px;
+    padding-right:10px;
+    font-size:17px;
+    width:max-content;
+
+}
+}

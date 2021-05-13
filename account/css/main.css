@@ -59,3 +59,14 @@ margin-left:30px;
     position:relative;
     right:0;
 }
+.feint{
+    color:
+}
+.hide-desktop{
+    display:none
+}
+@media screen and(max-width:800px){
+ .hide-desktop{
+     display:block;
+ }   
+}

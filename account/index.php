@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/sidebar.css" />
     <link rel="stylesheet" href="css/content.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/regular.min.css" integrity="sha512-Nqct4Jg8iYwFRs/C34hjAF5og5HONE2mrrUV1JZUswB+YU7vYSPyIjGMq+EAQYDmOsMuO9VIhKpRUa7GjRKVlg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css" integrity="sha512-apX8rFN/KxJW8rniQbkvzrshQ3KvyEH+4szT3Sno5svdr6E/CP0QE862yEeLBMUnCqLko8QaugGkzvWS7uNfFQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" />
+   
   </head>
   <body>
     <div class="sidebar">
@@ -26,13 +31,45 @@
       </ul>
     </div>
 
+    
+    <div class="popup">
+      <div class="box">
+
+        <i class="fa fa-times close-btn" onclick="togglePop()"></i>
+      <div class="title">Deposit Funds</div>
+      <div class="feint">Deposit cryptocurrency to your wallet and start trading on the world's largest exchange</div>
+      
+      <div class="option">
+      <div class="flex1">
+      <h3>
+      
+        Deposit Crypto
+      </h3>
+      <div class="feint">
+      Receive crypto from an external wallet with your wallet address or QR code to start trading
+      
+      </div>
+      
+      </div>
+      
+      <div class="flex2">
+      
+        <img src="img/depositimg.png">
+      </div>
+      </div>
+      
+      </div>
+      
+            </div>
+
     <div class="content-wrap">
-      <div class="header-box">
-        <div class="title">Dashboard</div>
+
+      <div class="header-box hide-desktop">
+        <div class="title hide-desktop">Overview</div>
 
         <div class="btn-group">
-          <a href="#" class="gold-btn">Deposit</a>
-          <a href="#" class="transp-btn">Withdraw</a>
+          <a href="#" class="gold-btn hide-desktop">Deposit</a>
+          <a href="#" class="transp-btn hide-desktop">Withdraw</a>
         </div>
       </div>
 
@@ -159,5 +196,27 @@
 
 
     </footer>
+
+    <script>
+
+
+var isPopOpen = true;
+var popup = document.querySelector(".popup");
+
+      function togglePop(){
+
+if(isPopOpen == true){
+  popup.style.display = "none";
+  isPopOpen = false;
+
+}
+else{
+  popup.style.display = "block";
+  isPopOpen = true;
+
+}
+
+      }
+    </script>
   </body>
 </html>

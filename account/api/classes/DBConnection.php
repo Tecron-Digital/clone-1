@@ -4,7 +4,7 @@ class DBConnection{
     private $hostName = "localhost";
     private $hostUserName = "root";
     private $hostPassword = "";
-    private $hostDbName = "fast_earners";
+    private $hostDbName = "binclone";
     public $connection;
 
 
