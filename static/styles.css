@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
 @font-face {
     font-family: 'BinancePlex';
-    src: url('../static/fonts/font.woff2') format('woff2'), url('myfont.woff') format('woff');
+    src: url('fonts/font.woff2') format('woff2'), url('myfont.woff') format('woff');
 }
 
 html,
@@ -12,6 +12,9 @@ body {
     overflow-x: hidden;
 }
 
+*{
+    font-family: "BinancePlex",Arial;
+}
 body .navbar,
 .bottom-nav {
     background-color: rgba(0, 0, 0, 1);
