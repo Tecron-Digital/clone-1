@@ -30,7 +30,6 @@ $user->setDetails();
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Binance</title>
-
     <link rel="stylesheet" href="../static/styles.css">
     <link rel="icon" href="../static/logo/binance_icon.png">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -40,14 +39,17 @@ $user->setDetails();
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/tailwind.min.css' integrity='sha512-BAK6UB671tmfzrkeH1CacTvgHQ3aLAFnT2KsigdATsc5X7+3u42tb5vjmAoDiqtxphP5dNZ3cDygivTsGEJhGw==' crossorigin='anonymous' />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
 
+   
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/sidebar.css" />
     <link rel="stylesheet" href="css/content.css" />
+    <link rel="stylesheet" href="css/library.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/regular.min.css" integrity="sha512-Nqct4Jg8iYwFRs/C34hjAF5og5HONE2mrrUV1JZUswB+YU7vYSPyIjGMq+EAQYDmOsMuO9VIhKpRUa7GjRKVlg==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css" integrity="sha512-apX8rFN/KxJW8rniQbkvzrshQ3KvyEH+4szT3Sno5svdr6E/CP0QE862yEeLBMUnCqLko8QaugGkzvWS7uNfFQ==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" integrity="sha512-OdEXQYCOldjqUEsuMKsZRj93Ht23QRlhIb8E/X0sbwZhme8eUw6g8q7AdxGJKakcBbv7+/PX0Gc2btf7Ru8cZA==" crossorigin="anonymous" />
-   
+    
+
   </head>
   <body>
   <nav class="navbar navbar-dark navbar-expand-md head-text" style="z-index: 2000;">
@@ -184,115 +186,65 @@ $user->setDetails();
       </ul>
     </div>
 
-    
-    <div class="popup">
-      <div class="box">
-
-        <i class="fa fa-times close-btn" onclick="togglePop()"></i>
-      <div class="title">Deposit Funds</div>
-      <div class="feint">Deposit cryptocurrency to your wallet and start trading on the world's largest exchange</div>
-      
-      <div class="option">
-      <div class="flex1">
-      <h3>
-      
-        Deposit Crypto
-      </h3>
-      <div class="feint">
-      Receive crypto from an external wallet with your wallet address or QR code to start trading
-      
-      </div>
-      
-      </div>
-      
-      <div class="flex2">
-      
-        <img src="img/depositimg.png">
-      </div>
-      </div>
-      
-      </div>
-      
-            </div>
+ 
 
     <div class="content-wrap">
 
-      <div class="header-box hide-desktop">
-        <div class="title hide-desktop">Overview</div>
+      <div class="header-box hide-mobile">
+        <div class="title hide-mobile">Fiat And Spot </div>
 
         <div class="btn-group">
-          <a href="#" class="gold-btn hide-desktop">Deposit</a>
-          <a href="#" class="transp-btn hide-desktop">Withdraw</a>
+          <a href="#" class="gold-btn hide-mobile">Deposit</a>
+          <a href="#" class="transp-btn hide-mobile">Withdraw</a>
         </div>
       </div>
 
       <div class="balance-box">
-        <div class="name">Estimated Balance</div>
+        <div class="name">Fiat and Spot Balance</div>
 
         <div class="amount">
           <div class="main"><?php echo $user->main_balance ?></div>
-          <div class="crypt">BTC</div>
+          <div class="crypt">BTC</div> <br>
           <div class="equiv">≈ $0.000000</div>
         </div>
       </div>
 
-      <div class="other flex">
-   
-
-      <div class="flex1">
-
-      <span class="feint">Coin</span>
-<select>
-<option>BTC <span>Bitcoin</span></option>
-<option>ETH<span>Ethereum</span></option>
-<option>USDT<span>Tether</span></option>
-<option>BNB</option>
-<option>EOS</option>
-
-
-</select>
-<div class="minibal">Total balance: 	
-<bold>0.00000000 BTC</bold></div>
-
-<h4><i class="fa fa-bulb"></i>
-Deposit Notice</h4>
-<ul>
-<li>1. If you have deposited, please pay attention to the text messages, site letters and emails we send to you.</li>
-<li>2. Coins will be deposited after 1 network confirmations.</li>
-<li>3. Until 2 confirmations are made, an equivalent amount of your assets will be temporarily unavailable for withdrawals.</li>
-</ul>
+      <div class="other">
+      <div class="cointable space-within-20 space-top-20">
+      
+      <div class="row head">
+      
+      <div class="item">Coin</div>
+      <div class="item">Total</div>
+      <div class="item">Available</div>
+      <div class="item">BTC Value</div>
+      <div class="item">Action</div>
       </div>
-      <div class="flex2">
-<!-- qr  code to scan here -->
 
-<h3>Deposit Network</h3>
+      <div class="row">
 
 
-<span class="arrival">Average arrival time : 1 Minutes </span>
+      <div class="item coin">
+<img src="img/btc.png">
 
-<div class="name"><span>BTC </span>Address</div><br>
-<div class="qrcover">
+<div class="name">BTC
+<div class="long-name feint font12">Bitcoin</div>    </div>
+      </div>
 
-<img src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=12kQMUkB9QJu9X5JP9H9M2qMUmrGtDakkV"><br>
-
-</div>
-
-<div class="walletaddress">12kQMUkB9QJu9X5JP9H9M2qMUmrGtDakkV</div>
-
-
-<div class="info">Send Only <span>BTC </span>to this wallet address</div><br>
-<div class="feint">
-
-Sending Coin or token other than BTC to this address may result in the loss of your deposit
-</div>
-
-<img src="btc.png">
+      <div class="item">0.000000</div>
+      <div class="item">0.000000</div>
+      <div class="item">0.000000</div>
+      <div class="item flex">
+<a href="#" class="gold space-left-10 font14">Buy</a>
+<a href="#" class="gold space-left-10 font14">Deposit</a>
+<a href="#" class="gold space-left-10 font14">Withdraw</a>
 
 
       </div>
-        </div>
-        <!----Box-->
-        
+      </div>
+      
+      </div>
+      </div>
     </div>
 
     <footer>
